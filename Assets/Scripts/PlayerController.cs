@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject snowBall;
     public Transform throwPoint;
 
+    public AudioSource throwSound;
+
 	// Use this for initialization
 	void Start () {
         theRB = GetComponent<Rigidbody2D>();
@@ -59,6 +61,8 @@ public class PlayerController : MonoBehaviour {
             GameObject ballClone = (GameObject)Instantiate(snowBall, throwPoint.position, throwPoint.rotation);
             ballClone.transform.localScale = transform.localScale;
             anim.SetTrigger("Throw");
+
+            throwSound.Play();
         }
 
         // Flip character based on movement direction

@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour {
     public GameObject[] p1Sticks;
     public GameObject[] p2Sticks;
 
+    public AudioSource hurtSound;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -51,6 +53,8 @@ public class GameManager : MonoBehaviour {
             {
                 p1Sticks[i].SetActive(false);
             }
+
+            hurtSound.Play();
         }
     }
 
@@ -69,5 +73,7 @@ public class GameManager : MonoBehaviour {
                 p2Sticks[i].SetActive(false);
             }
         }
+
+        hurtSound.Play();
     }
 }
