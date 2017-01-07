@@ -22,6 +22,17 @@ public class SnowBall : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        // TODO: Maybe just pass the info who was hit as a function parameter so no need for separate checks?
+        if(other.tag == "Player1")
+        {
+            FindObjectOfType<GameManager>().HurtP1();
+        }
+
+        if (other.tag == "Player2")
+        {
+            FindObjectOfType<GameManager>().HurtP2();
+        }
+
         Instantiate(snowBallEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
