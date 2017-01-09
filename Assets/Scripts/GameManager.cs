@@ -29,8 +29,9 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+    // TODO: Cleanup to work with new HUD and player controller system
 	void Update () {
-		if(P1Life <= 0)
+        if (P1Life <= 0 || GameObject.FindGameObjectWithTag("Player1") != null && GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>().health <= 0)
         {
             player1.SetActive(false);
             p2Wins.SetActive(true);
@@ -53,9 +54,10 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    // TODO: Remove
     public void HurtP1()
     {
-        P1Life -= 1;
+        //P1Life -= 1;
 
         for(int i = 0; i < p1Sticks.Length; i++)
         {

@@ -4924,7 +4924,7 @@ GameObject:
   - component: {fileID: 794215292}
   - component: {fileID: 794215296}
   - component: {fileID: 794215295}
-  - component: {fileID: 794215294}
+  - component: {fileID: 794215298}
   - component: {fileID: 794215297}
   m_Layer: 8
   m_Name: Player 1
@@ -4983,32 +4983,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &794215294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 794215291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 175e26c624b784045a26c89f061ece86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  jumpForce: 30
-  left: 97
-  right: 100
-  jump: 32
-  throwBall: 102
-  groundCheckPoint: {fileID: 551016678}
-  groundCheckRadius: 0.2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 1
-  isGrounded: 0
-  snowBall: {fileID: 1436911537151360, guid: f8e36fac6d434b74fa21b30ebe658158, type: 2}
-  throwPoint: {fileID: 1125040622}
-  throwSound: {fileID: 1439557764}
 --- !u!61 &794215295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5060,6 +5034,36 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &794215298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794215291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2258782a1ba42534e908fdfd0cc42313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Player
+  health: 7
+  moveSpeed: 10
+  jumpForce: 30
+  left: 97
+  right: 100
+  jump: 119
+  throwBall: 32
+  groundCheckPoint: {fileID: 551016678}
+  groundCheckRadius: 0.2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1
+  isGrounded: 0
+  snowBall: {fileID: 1436911537151360, guid: f8e36fac6d434b74fa21b30ebe658158, type: 2}
+  throwPoint: {fileID: 1125040622}
+  throwSound: {fileID: 1439557764}
+  hurtSound: {fileID: 1412229561}
+  HUD: {fileID: 1297298214312640, guid: a6127995f074d674bb44bf30af317b62, type: 2}
 --- !u!1 &803244935
 GameObject:
   m_ObjectHideFlags: 0

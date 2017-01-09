@@ -25,7 +25,9 @@ public class SnowBall : MonoBehaviour {
         // TODO: Maybe just pass the info who was hit as a function parameter so no need for separate checks?
         if(other.tag == "Player1")
         {
+            // TODO: Cleanup
             FindObjectOfType<GameManager>().HurtP1();
+            other.GetComponent<Player>().takeDamage(1);
         }
 
         if (other.tag == "Player2")
