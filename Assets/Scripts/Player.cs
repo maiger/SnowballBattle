@@ -46,11 +46,9 @@ public class Player : MonoBehaviour {
     {
         theRB = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
-        Initialize(playerName, health, moveSpeed, jumpForce, left, right, jump, throwBall, new Vector2(Screen.width/2, Screen.height/2));
     }
 
-    void Initialize(string _playerName, int _health, float _moveSpeed, float _jumpForce, KeyCode _left, KeyCode _right, KeyCode _jump, KeyCode _throwBall, Vector2 hudPos)
+    public void Initialize(string _playerName, int _health, float _moveSpeed, float _jumpForce, KeyCode _left, KeyCode _right, KeyCode _jump, KeyCode _throwBall, Vector2 hudPos)
     {
         playerName = _playerName;
         health = _health;

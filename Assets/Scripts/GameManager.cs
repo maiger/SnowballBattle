@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    public GameObject player;
+
     // TODO: Maybe create a class out of players if things get more complex in the future
     public GameObject player1;
     public GameObject player2;
@@ -25,8 +27,13 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        // TODO: Clean this up
+        // Spawn player
+        GameObject player1 = (GameObject)Instantiate(player);
+        player1.GetComponent<Player>().Initialize("Testi", 5, 10, 30, KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.Space, new Vector2(Screen.width / 2, Screen.height / 2));
+        player1.tag = "Player 1";
+        player1.transform.position = new Vector3(0, 0, 0);
+    }
 	
 	// Update is called once per frame
     // TODO: Cleanup to work with new HUD and player controller system
