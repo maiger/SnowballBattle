@@ -31,21 +31,23 @@ public class Player : MonoBehaviour {
     public Transform throwPoint;
 
     [Header("Audio")]
-    public AudioSource throwSound;
-    public AudioSource hurtSound;
+    public AudioClip throwSound;
+    public AudioClip hurtSound;
+    private AudioSource audioSrc;
 
     [Header("HUD")]
     public GameObject HUD;
     private GameObject HUDClone;
 
-    private Rigidbody2D theRB;
+    private Rigidbody2D rb;
     private Animator anim;
 
     // Use this for initialization
     void Start()
     {
-        theRB = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioSrc = GetComponent<AudioSource>();
     }
 
     public void Initialize(string _playerName, int _health, float _moveSpeed, float _jumpForce, KeyCode _left, KeyCode _right, KeyCode _jump, KeyCode _throwBall, Vector2 hudPos)
@@ -79,21 +81,21 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKey(left))
         {
-            theRB.velocity = new Vector2(-moveSpeed, theRB.velocity.y);
+            rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
         }
         else if (Input.GetKey(right))
         {
-            theRB.velocity = new Vector2(moveSpeed, theRB.velocity.y);
+            rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
         }
         else
         {
             // TODO: Add surface based sliding
-            theRB.velocity = new Vector2(0, theRB.velocity.y);
+            rb.velocity = new Vector2(0, rb.velocity.y);
         }
 
         if (Input.GetKeyDown(jump) && isGrounded)
         {
-            theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
         if (Input.GetKeyDown(throwBall))
@@ -102,30 +104,37 @@ public class Player : MonoBehaviour {
             ballClone.transform.localScale = transform.localScale;
             anim.SetTrigger("Throw");
 
-            throwSound.Play();
+            PlayAudio(audioSrc, throwSound, 1);
         }
 
         // Flip character based on movement direction
-        if (theRB.velocity.x < 0)
+        if (rb.velocity.x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        else if (theRB.velocity.x > 0)
+        else if (rb.velocity.x > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
 
         // Give updated parameter values to animator
-        anim.SetFloat("Speed", Mathf.Abs(theRB.velocity.x));
+        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         anim.SetBool("Grounded", isGrounded);
     }
 
     public void takeDamage(int dmgAmount)
     {
         health -= dmgAmount;
-        hurtSound.Play();
+        PlayAudio(audioSrc, hurtSound, 1);
 
         // Inform hud to decrease health
         HUDClone.GetComponent<HUDController>().SetHealth(health);
+    }
+
+    private void PlayAudio(AudioSource audioSrc, AudioClip audioClip, float volume)
+    {
+        audioSrc.clip = audioClip;
+        audioSrc.volume = volume;
+        audioSrc.Play();
     }
 }

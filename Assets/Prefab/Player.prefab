@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 61630538401120720}
   - component: {fileID: 114106657392195000}
   - component: {fileID: 95693671357654308}
+  - component: {fileID: 82423906305236500}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player1
@@ -136,6 +137,86 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.05}
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.9}
+--- !u!82 &82423906305236500
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1456830834398474}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fb43b0d353ec610499478b1cd2d9c415, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95693671357654308
 Animator:
   serializedVersion: 3
@@ -180,8 +261,8 @@ MonoBehaviour:
   isGrounded: 0
   snowBall: {fileID: 1436911537151360, guid: f8e36fac6d434b74fa21b30ebe658158, type: 2}
   throwPoint: {fileID: 4906405295800900}
-  throwSound: {fileID: 0}
-  hurtSound: {fileID: 0}
+  throwSound: {fileID: 8300000, guid: f10948becfc3fe94abe55aa9ceed3dd0, type: 3}
+  hurtSound: {fileID: 8300000, guid: fb43b0d353ec610499478b1cd2d9c415, type: 3}
   HUD: {fileID: 1297298214312640, guid: a6127995f074d674bb44bf30af317b62, type: 2}
 --- !u!212 &212739015015733424
 SpriteRenderer:

@@ -26,13 +26,7 @@ public class SnowBall : MonoBehaviour {
         if(other.tag == "Player1")
         {
             // TODO: Cleanup
-            FindObjectOfType<GameManager>().HurtP1();
             other.GetComponent<Player>().takeDamage(1);
-        }
-
-        if (other.tag == "Player2")
-        {
-            FindObjectOfType<GameManager>().HurtP2();
         }
 
         Instantiate(snowBallEffect, transform.position, transform.rotation);
