@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour {
 
 	void Start () {
         SpawnPlayer("Testi", "Player", Vector3.zero, 5, 10, 30, KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.Space, new Vector2(Screen.width / 10, (Screen.height - Screen.height / 10)));
+        // TODO: Smooth the camera movement
+        Camera.main.transform.SetParent(characterList[0].transform);
     }
 	
 	void Update () {
