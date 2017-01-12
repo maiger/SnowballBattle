@@ -7,26 +7,23 @@ public class GameManager : MonoBehaviour {
 
     public GameObject player;
 
-    public AudioSource hurtSound;
-
     public string mainMenu;
 
-	// Use this for initialization
+    private List<GameObject> characterList = new List<GameObject>();
+
 	void Start () {
-        // TODO: Clean this up
-        // Spawn player
-        GameObject player1 = (GameObject)Instantiate(player);
-        player1.GetComponent<Player>().Initialize("Testi", 5, 10, 30, KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.Space, new Vector2(Screen.width / 10, Screen.height - Screen.height / 10));
-        player1.tag = "Player1";
-        player1.transform.position = new Vector3(0, 0, 0);
+        SpawnPlayer("Testi", "Player", Vector3.zero, 5, 10, 30, KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.Space, new Vector2(Screen.width / 10, (Screen.height - Screen.height / 10)));
     }
 	
-	// Update is called once per frame
-    // TODO: Cleanup to work with new HUD and player controller system
 	void Update () {
-        if (GameObject.FindGameObjectWithTag("Player1") != null && GameObject.FindGameObjectWithTag("Player1").GetComponent<Player>().health <= 0)
+        // Is foreach in an update loop really the way to go?
+        foreach (GameObject character in characterList)
         {
-            // Player died
+            // Should we get this component somewhere else so not to have to do it each frame?
+            if(character.GetComponent<Player>().health <= 0)
+            {
+                // TODO: Handle player death
+            }
         }
         if(Input.GetKeyDown(KeyCode.R))
         {
@@ -37,5 +34,14 @@ public class GameManager : MonoBehaviour {
         {
             SceneManager.LoadScene(mainMenu);
         }
+    }
+
+    void SpawnPlayer(string _playerName, string tag, Vector3 playerPos, int _health, float _moveSpeed, float _jumpForce, KeyCode _left, KeyCode _right, KeyCode _jump, KeyCode _throwBall, Vector2 hudPos)
+    {
+        GameObject newPlayer = (GameObject)Instantiate(player);
+        newPlayer.GetComponent<Player>().Initialize(_playerName, _health, _moveSpeed, _jumpForce, _left, _right, _jump, _throwBall, hudPos);
+        newPlayer.tag = tag;
+        newPlayer.transform.position = playerPos;
+        characterList.Add(newPlayer);
     }
 }

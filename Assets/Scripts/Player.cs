@@ -72,13 +72,30 @@ public class Player : MonoBehaviour {
         HUDClone.GetComponent<HUDController>().Initialize(playerName, health);
     }
 
-    // Update is called once per frame
     void Update()
     {
-
         // TODO: This could be done with raycasting, but would it be better?
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, whatIsGround);
 
+        CheckInputs();
+
+        // Flip character based on movement direction
+        if (rb.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (rb.velocity.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        // Give updated parameter values to animator
+        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        anim.SetBool("Grounded", isGrounded);
+    }
+
+    void CheckInputs()
+    {
         if (Input.GetKey(left))
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
@@ -106,20 +123,6 @@ public class Player : MonoBehaviour {
 
             PlayAudio(audioSrc, throwSound, 1);
         }
-
-        // Flip character based on movement direction
-        if (rb.velocity.x < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (rb.velocity.x > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-
-        // Give updated parameter values to animator
-        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        anim.SetBool("Grounded", isGrounded);
     }
 
     public void takeDamage(int dmgAmount)

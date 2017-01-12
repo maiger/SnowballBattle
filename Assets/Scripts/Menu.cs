@@ -5,18 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
-    public string level1;
-    public string level2;
-
-    // TODO: Compact this to a single function
-    public void startLevel1()
+   public void GoToScene(string sceneName)
     {
-        SceneManager.LoadScene(level1);
-    }
-
-    public void startLevel2()
-    {
-        SceneManager.LoadScene(level2);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void QuitGame()

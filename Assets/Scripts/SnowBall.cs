@@ -6,26 +6,22 @@ public class SnowBall : MonoBehaviour {
 
     public float ballSpeed;
 
-    private Rigidbody2D theRB;
+    private Rigidbody2D rb;
 
     public GameObject snowBallEffect;
 
-	// Use this for initialization
 	void Start () {
-        theRB = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
-        theRB.velocity = new Vector2(ballSpeed * transform.localScale.x, 0);
+        rb.velocity = new Vector2(ballSpeed * transform.localScale.x, 0);
 	}
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // TODO: Maybe just pass the info who was hit as a function parameter so no need for separate checks?
-        if(other.tag == "Player1")
+        if(other.tag == "Player")
         {
-            // TODO: Cleanup
             other.GetComponent<Player>().takeDamage(1);
         }
 
