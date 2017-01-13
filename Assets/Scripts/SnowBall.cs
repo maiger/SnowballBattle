@@ -23,6 +23,10 @@ public class SnowBall : MonoBehaviour {
         if(other.tag == "Player")
         {
             other.GetComponent<Player>().takeDamage(1);
+        } else if(other.tag == "Enemy")
+        {
+            // TODO: Fix this so work on any enemy
+            other.GetComponent<walkAI>().takeDamage(1);
         }
 
         Instantiate(snowBallEffect, transform.position, transform.rotation);
