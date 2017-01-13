@@ -1,53 +1,64 @@
 fileFormatVersion: 2
-guid: 1829f222cc9133a4680ab68f2c83a19e
-timeCreated: 1483539823
+guid: a1919bd0f801e344dbba8dfac2f61025
+timeCreated: 1484312150
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SnowBallFightArt_0
-    21300002: SnowBallFightArt_1
-    21300004: SnowBallFightArt_2
-    21300006: SnowBallFightArt_3
-    21300008: SnowBallFightArt_4
-    21300010: SnowBallFightArt_7
-    21300012: SnowBallFightArt_8
-    21300014: SnowBallFightArt_9
-    21300016: SnowBallFightArt_10
-    21300018: SnowBallFightArt_11
-    21300020: SnowBallFightArt_13
-    21300022: SnowBallFightArt_14
-    21300024: SnowBallFightArt_15
-    21300026: SnowBallFightArt_16
-    21300028: SnowBallFightArt_17
-    21300030: SnowBallFightArt_20
-    21300032: SnowBallFightArt_21
-    21300034: SnowBallFightArt_22
-    21300036: SnowBallFightArt_23
-    21300038: SnowBallFightArt_24
-    21300040: SnowBallFightArt_25
-    21300042: SnowBallFightArt_28
-    21300044: SnowBallFightArt_30
-    21300046: SnowBallFightArt_31
-    21300048: SnowBallFightArt_32
-    21300050: SnowBallFightArt_33
-    21300052: SnowBallFightArt_34
-    21300054: SnowBallFightArt_36
-    21300056: SnowBallFightArt_37
-    21300058: SnowBallFightArt_38
-    21300060: SnowBallFightArt_39
-    21300062: SnowBallFightArt_40
-    21300064: SnowBallFightArt_41
-    21300066: SnowBallFightArt_42
-    21300068: SnowBallFightArt_47
-    21300070: SnowBallFightArt_48
-    21300072: SnowBallFightArt_49
-    21300074: SnowBallFightArt_51
-    21300076: SnowBallFightArt_53
-    21300078: SnowBallFightArt_54
-    21300080: SnowBallFightArt_55
-    21300082: SnowBallFightArt_58
-    21300084: SnowBallFightArt_59
-    21300086: SnowBallFightArt_60
+    21300000: spritesheet_players_0
+    21300002: spritesheet_players_1
+    21300004: spritesheet_players_2
+    21300006: spritesheet_players_3
+    21300008: spritesheet_players_4
+    21300010: spritesheet_players_5
+    21300012: spritesheet_players_6
+    21300014: spritesheet_players_8
+    21300016: spritesheet_players_9
+    21300018: spritesheet_players_10
+    21300020: spritesheet_players_11
+    21300022: spritesheet_players_12
+    21300024: spritesheet_players_13
+    21300026: spritesheet_players_14
+    21300028: spritesheet_players_16
+    21300030: spritesheet_players_17
+    21300032: spritesheet_players_18
+    21300034: spritesheet_players_19
+    21300036: spritesheet_players_20
+    21300038: spritesheet_players_21
+    21300040: spritesheet_players_22
+    21300042: spritesheet_players_24
+    21300044: spritesheet_players_25
+    21300046: spritesheet_players_26
+    21300048: spritesheet_players_27
+    21300050: spritesheet_players_28
+    21300052: spritesheet_players_29
+    21300054: spritesheet_players_30
+    21300056: spritesheet_players_32
+    21300058: spritesheet_players_33
+    21300060: spritesheet_players_34
+    21300062: spritesheet_players_35
+    21300064: spritesheet_players_36
+    21300066: spritesheet_players_37
+    21300068: spritesheet_players_38
+    21300070: spritesheet_players_40
+    21300072: spritesheet_players_41
+    21300074: spritesheet_players_42
+    21300076: spritesheet_players_43
+    21300078: spritesheet_players_44
+    21300080: spritesheet_players_45
+    21300082: spritesheet_players_46
+    21300084: spritesheet_players_48
+    21300086: spritesheet_players_49
+    21300088: spritesheet_players_50
+    21300090: spritesheet_players_51
+    21300092: spritesheet_players_52
+    21300094: spritesheet_players_53
+    21300096: spritesheet_players_54
+    21300098: spritesheet_players_56
+    21300100: spritesheet_players_57
+    21300102: spritesheet_players_58
+    21300104: spritesheet_players_59
+    21300106: spritesheet_players_60
+    21300108: spritesheet_players_61
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -79,12 +90,12 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 128
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -95,591 +106,734 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-    maxTextureSize: 128
-    textureFormat: 12
+    maxTextureSize: 2048
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SnowBallFightArt_0
+      name: spritesheet_players_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 112
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_4
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 117
-        width: 8
-        height: 6
+        y: 1792
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_7
+      name: spritesheet_players_1
       rect:
         serializedVersion: 2
-        x: 112
-        y: 112
-        width: 16
-        height: 16
+        x: 128
+        y: 1792
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_8
+      name: spritesheet_players_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1792
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1792
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 16
-        height: 16
+        y: 1536
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_9
+      name: spritesheet_players_9
       rect:
         serializedVersion: 2
-        x: 16
-        y: 96
-        width: 16
-        height: 16
+        x: 128
+        y: 1536
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_10
+      name: spritesheet_players_10
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 16
-        height: 16
+        x: 256
+        y: 1536
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_11
+      name: spritesheet_players_11
       rect:
         serializedVersion: 2
-        x: 48
-        y: 96
-        width: 16
-        height: 16
+        x: 384
+        y: 1536
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_13
+      name: spritesheet_players_12
       rect:
         serializedVersion: 2
-        x: 80
-        y: 96
-        width: 16
-        height: 16
+        x: 512
+        y: 1536
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_14
+      name: spritesheet_players_13
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
-        width: 16
-        height: 16
+        x: 640
+        y: 1536
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_15
+      name: spritesheet_players_14
       rect:
         serializedVersion: 2
-        x: 112
-        y: 96
-        width: 16
-        height: 16
+        x: 768
+        y: 1536
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_17
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_20
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_21
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_22
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_23
+      name: spritesheet_players_16
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 16
-        height: 16
+        y: 1280
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_24
+      name: spritesheet_players_17
       rect:
         serializedVersion: 2
-        x: 16
-        y: 64
-        width: 16
-        height: 16
+        x: 128
+        y: 1280
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_25
+      name: spritesheet_players_18
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 16
-        height: 16
+        x: 256
+        y: 1280
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_28
+      name: spritesheet_players_19
       rect:
         serializedVersion: 2
-        x: 80
-        y: 64
-        width: 16
-        height: 16
+        x: 384
+        y: 1280
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_30
+      name: spritesheet_players_20
       rect:
         serializedVersion: 2
-        x: 112
-        y: 64
-        width: 16
-        height: 16
+        x: 512
+        y: 1280
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_31
+      name: spritesheet_players_21
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
-        width: 16
-        height: 16
+        x: 640
+        y: 1280
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_32
+      name: spritesheet_players_22
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
+        x: 768
+        y: 1280
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_33
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_34
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_36
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_37
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_38
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_39
+      name: spritesheet_players_24
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 16
-        height: 16
+        y: 1024
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_40
+      name: spritesheet_players_25
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
+        x: 128
+        y: 1024
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_41
+      name: spritesheet_players_26
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
+        x: 256
+        y: 1024
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_42
+      name: spritesheet_players_27
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
+        x: 384
+        y: 1024
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_47
+      name: spritesheet_players_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1024
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_30
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_32
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 16
-        height: 16
+        y: 768
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_48
+      name: spritesheet_players_33
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
+        x: 128
+        y: 768
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_49
+      name: spritesheet_players_34
       rect:
         serializedVersion: 2
-        x: 68
-        y: 22
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SnowBallFightArt_51
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 16
-        width: 16
-        height: 16
+        x: 256
+        y: 768
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_53
+      name: spritesheet_players_35
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_37
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_42
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_43
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_45
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_46
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_53
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_54
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_56
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_54
+      name: spritesheet_players_57
       rect:
         serializedVersion: 2
-        x: 16
+        x: 128
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_55
+      name: spritesheet_players_58
       rect:
         serializedVersion: 2
-        x: 32
+        x: 256
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_58
+      name: spritesheet_players_59
       rect:
         serializedVersion: 2
-        x: 80
+        x: 384
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_59
+      name: spritesheet_players_60
       rect:
         serializedVersion: 2
-        x: 96
+        x: 512
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SnowBallFightArt_60
+      name: spritesheet_players_61
       rect:
         serializedVersion: 2
-        x: 112
+        x: 640
         y: 0
-        width: 16
-        height: 16
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

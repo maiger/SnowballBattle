@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1456830834398474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.250445, y: -3.96, z: 0}
+  m_LocalPosition: {x: -7.084767, y: -4.950786, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4500439432515884}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1258790714843900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4359595376487332}
@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914928525206596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.791, y: 0, z: 0}
+  m_LocalPosition: {x: 0.79, y: -0.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4359595376487332}
@@ -134,9 +134,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.43}
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.9}
+  m_Size: {x: 0.6, y: 1.15}
 --- !u!82 &82423906305236500
 AudioSource:
   m_ObjectHideFlags: 1
@@ -295,7 +295,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1829f222cc9133a4680ab68f2c83a19e, type: 3}
+  m_Sprite: {fileID: 21300010, guid: a1919bd0f801e344dbba8dfac2f61025, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

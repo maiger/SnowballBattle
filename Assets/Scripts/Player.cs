@@ -103,6 +103,7 @@ public class Player : MonoBehaviour {
         else if (Input.GetKey(right))
         {
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+            Debug.Log(moveSpeed);
         }
         else
         {

@@ -16,7 +16,7 @@ public class SnowBall : MonoBehaviour {
 	
 	void Update () {
         rb.velocity = new Vector2(ballSpeed * transform.localScale.x, 0);
-	}
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
