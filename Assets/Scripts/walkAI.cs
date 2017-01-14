@@ -28,6 +28,15 @@ public class walkAI : MonoBehaviour {
 
         rb.velocity = new Vector2(-speed, rb.velocity.y);
 
+        if (rb.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (rb.velocity.x > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         anim.SetBool("Grounded", isGrounded);
     }
@@ -41,6 +50,19 @@ public class walkAI : MonoBehaviour {
             Die();
         }
 
+    }
+
+    void FixedUpdate()
+    {
+        float rayDist = 2f;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * Mathf.Sign(rb.velocity.x), rayDist);
+        //Debug.DrawRay(transform.position, Vector2.right * Mathf.Sign(rb.velocity.x) * rayDist, Color.red);
+        if (hit.collider != null)
+        {
+            Debug.Log("Hit " + hit.collider.gameObject.name + ", dist: " + hit.distance);
+            speed *= -1;
+        }
+        
     }
 
     void Die()
