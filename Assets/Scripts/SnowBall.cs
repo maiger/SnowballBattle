@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class SnowBall : MonoBehaviour {
 
+    [Header("General")]
     public float ballSpeed;
-
-    private Rigidbody2D rb;
+    public int damageAmount = 1;
 
     public GameObject snowBallEffect;
 
-	void Start () {
+    private Rigidbody2D rb;
+
+    void Start () {
         rb = GetComponent<Rigidbody2D>();
 	}
 	
@@ -22,11 +24,10 @@ public class SnowBall : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
-            other.GetComponent<Player>().takeDamage(1);
+            other.GetComponent<Player>().takeDamage(damageAmount);
         } else if(other.tag == "Enemy")
         {
-            // TODO: Fix this so work on any enemy
-            other.GetComponent<walkAI>().takeDamage(1);
+            other.GetComponent<Character>().takeDamage(damageAmount);
         }
 
         Instantiate(snowBallEffect, transform.position, transform.rotation);

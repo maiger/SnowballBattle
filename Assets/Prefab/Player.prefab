@@ -37,9 +37,9 @@ GameObject:
   - component: {fileID: 212739015015733424}
   - component: {fileID: 50112868026648494}
   - component: {fileID: 61630538401120720}
-  - component: {fileID: 114106657392195000}
   - component: {fileID: 95693671357654308}
   - component: {fileID: 82423906305236500}
+  - component: {fileID: 114195560361077626}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -234,7 +234,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114106657392195000
+--- !u!114 &114195560361077626
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -245,20 +245,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2258782a1ba42534e908fdfd0cc42313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Player
-  health: 7
-  moveSpeed: 10
-  jumpForce: 30
-  left: 97
-  right: 100
-  jump: 119
-  throwBall: 32
+  moveSpeed: 0
+  health: 0
   groundCheckPoint: {fileID: 4500439432515884}
   groundCheckRadius: 0.2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
   isGrounded: 0
+  playerName: Player
+  jumpForce: 30
+  left: 97
+  right: 100
+  jump: 119
+  throwBall: 32
   snowBall: {fileID: 1436911537151360, guid: f8e36fac6d434b74fa21b30ebe658158, type: 2}
   throwPoint: {fileID: 4906405295800900}
   throwSound: {fileID: 8300000, guid: f10948becfc3fe94abe55aa9ceed3dd0, type: 3}

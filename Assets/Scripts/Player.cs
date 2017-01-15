@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour {
+public class Player : Character {
+    [Header("__________________")]
+    [Header("Player")]
 
     [Header("General")]
     public string playerName = "Player";
-    public int health = 5;
 
     [Header("Movement")]
-    public float moveSpeed = 10;
     public float jumpForce = 30;
 
     [Header("Controls")]
@@ -19,36 +19,16 @@ public class Player : MonoBehaviour {
     public KeyCode jump = KeyCode.W;
     public KeyCode throwBall = KeyCode.Space;
 
-    [Header("Ground check")]
-    public Transform groundCheckPoint;
-    public float groundCheckRadius = 0.2f;
-    public LayerMask whatIsGround;
-
-    public bool isGrounded;
-
     [Header("Throwing")]
     public GameObject snowBall;
     public Transform throwPoint;
 
     [Header("Audio")]
     public AudioClip throwSound;
-    public AudioClip hurtSound;
-    private AudioSource audioSrc;
 
     [Header("HUD")]
     public GameObject HUD;
     private GameObject HUDClone;
-
-    private Rigidbody2D rb;
-    private Animator anim;
-
-    // Use this for initialization
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        audioSrc = GetComponent<AudioSource>();
-    }
 
     public void Initialize(string _playerName, int _health, float _moveSpeed, float _jumpForce, KeyCode _left, KeyCode _right, KeyCode _jump, KeyCode _throwBall, Vector2 hudPos)
     {
@@ -72,7 +52,8 @@ public class Player : MonoBehaviour {
         HUDClone.GetComponent<HUDController>().Initialize(playerName, health);
     }
 
-    void Update()
+    // Overridden because player need some special cuddling
+    protected override void Update()
     {
         // TODO: This could be done with raycasting, but would it be better?
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, whatIsGround);
@@ -125,19 +106,13 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public void takeDamage(int dmgAmount)
+    // Overridden because we need to inform the hud unlike other characters
+    public override void takeDamage(int dmgAmount)
     {
         health -= dmgAmount;
-        PlayAudio(audioSrc, hurtSound, 1);
+        PlayAudio(audioSrc, hurtSound, 0.5f);
 
         // Inform hud to decrease health
         HUDClone.GetComponent<HUDController>().SetHealth(health);
-    }
-
-    private void PlayAudio(AudioSource audioSrc, AudioClip audioClip, float volume)
-    {
-        audioSrc.clip = audioClip;
-        audioSrc.volume = volume;
-        audioSrc.Play();
     }
 }

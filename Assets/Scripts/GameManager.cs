@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
         foreach (GameObject character in characterList)
         {
             // Should we get this component somewhere else so not to have to do it each frame?
-            if(character.GetComponent<Player>().health <= 0)
+            if(character.GetComponent<Character>().health <= 0)
             {
                 // TODO: Handle player death
             }
