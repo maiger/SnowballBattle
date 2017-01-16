@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public GameObject player;
+    public GameObject slug;
 
     public string mainMenu;
 
@@ -13,20 +14,13 @@ public class GameManager : MonoBehaviour {
 
 	void Start () {
         SpawnPlayer("Testi", "Player", Vector3.zero, 5, 10, 30, KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.Space, new Vector2(Screen.width / 10, (Screen.height - Screen.height / 10)));
+        SpawnCharacter(slug, "Enemy", new Vector2(0, 0), 5, 10);
         // TODO: Smooth the camera movement
         Camera.main.transform.SetParent(characterList[0].transform);
     }
 	
 	void Update () {
-        // Is foreach in an update loop really the way to go?
-        foreach (GameObject character in characterList)
-        {
-            // Should we get this component somewhere else so not to have to do it each frame?
-            if(character.GetComponent<Character>().health <= 0)
-            {
-                // TODO: Handle player death
-            }
-        }
+ 
         if(Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -45,5 +39,14 @@ public class GameManager : MonoBehaviour {
         newPlayer.tag = tag;
         newPlayer.transform.position = playerPos;
         characterList.Add(newPlayer);
+    }
+
+    void SpawnCharacter(GameObject prefab, string tag, Vector2 position, int health, int moveSpeed)
+    {
+        GameObject newCharacter = (GameObject)Instantiate(prefab);
+        newCharacter.GetComponent<Character>().Initialize(health, moveSpeed);
+        newCharacter.tag = tag;
+        newCharacter.transform.position = position;
+        characterList.Add(newCharacter);
     }
 }

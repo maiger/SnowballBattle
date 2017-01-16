@@ -114,5 +114,10 @@ public class Player : Character {
 
         // Inform hud to decrease health
         HUDClone.GetComponent<HUDController>().SetHealth(health);
+
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 }

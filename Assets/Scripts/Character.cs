@@ -6,9 +6,9 @@ public class Character : MonoBehaviour
 {
     [Header("Character")]
 
-    [Header("General")]
-    public float moveSpeed;
-    public int health;
+    //[Header("General")]
+    protected float moveSpeed;
+    protected int health;
 
     [Header("Ground check")]
     public Transform groundCheckPoint;
@@ -29,6 +29,12 @@ public class Character : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         audioSrc = GetComponent<AudioSource>();
+    }
+
+    public virtual void Initialize(int _health, float _moveSpeed)
+    {
+        health = _health;
+        moveSpeed = _moveSpeed;
     }
 
     protected virtual void Update()
@@ -66,7 +72,7 @@ public class Character : MonoBehaviour
         }
     }
 
-    void Die()
+    protected void Die()
     {
         Destroy(gameObject);
     }
