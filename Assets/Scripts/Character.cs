@@ -83,4 +83,9 @@ public class Character : MonoBehaviour
         audioSrc.volume = volume;
         audioSrc.Play();
     }
+
+    public Vector2 GetVelocity()
+    {
+        return rb.velocity;
+    }
 }

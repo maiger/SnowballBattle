@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
         SpawnPlayer("Testi", "Player", Vector3.zero, 5, 10, 30, KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.Space, new Vector2(Screen.width / 10, (Screen.height - Screen.height / 10)));
         SpawnCharacter(slug, "Enemy", new Vector2(0, 0), 5, 10);
         // TODO: Smooth the camera movement
-        Camera.main.transform.SetParent(characterList[0].transform);
+        //Camera.main.transform.SetParent(characterList[0].transform);
     }
 	
 	void Update () {
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour {
         {
             SceneManager.LoadScene(mainMenu);
         }
+
+        LerpCamera(characterList[0].GetComponent<Character>(), 0.35f);
     }
 
     void SpawnPlayer(string _playerName, string tag, Vector3 playerPos, int _health, float _moveSpeed, float _jumpForce, KeyCode _left, KeyCode _right, KeyCode _jump, KeyCode _throwBall, Vector2 hudPos)
@@ -48,5 +50,28 @@ public class GameManager : MonoBehaviour {
         newCharacter.tag = tag;
         newCharacter.transform.position = position;
         characterList.Add(newCharacter);
+    }
+
+    void LerpCamera(Character cameraTarget, float cameraOffsetX)
+    {
+        // TODO: Feels a but choppy, have to investigate
+
+        // Find out velocity of character, will be used to check the direction of movement
+        Vector2 velocityOfTarget = cameraTarget.GetVelocity();
+        // Get raw vector for where to put camera
+        Vector3 targetPos = Vector3.Lerp(Camera.main.transform.position, cameraTarget.transform.position, 0.05f);
+        // Move the camera a bit to the side so players have more room in front of them to see what is going on.
+        if(velocityOfTarget.x > 0)
+        {
+            targetPos.x += cameraOffsetX;
+        } else if (velocityOfTarget.x < 0)
+        {
+            targetPos.x += -cameraOffsetX;
+        }
+
+        // Set target z back to original value so camera can actually see something
+        targetPos.z = -10;
+        // Apply finished vector to camera position.
+        Camera.main.transform.position = targetPos;
     }
 }
